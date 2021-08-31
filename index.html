@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google</title>
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+            li{
+                display: inline;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                float: left;
+            }
+            .container{
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+            .wrapper{
+                display: grid;
+                align-items: flex-start;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 100px;
+                grid-gap: 15px;
+            }
+            .logo{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                padding: 150px;
+            }
+            .search{
+                display: block;
+                margin: auto;
+                width: 50%;
+                justify-content: center;
+            }
+            .buttons{
+                margin-left: auto;
+                margin-right: auto;
+                padding:10px;
+            }
+            .signin{
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+                <ul>
+                    <li class="box1">About</li>
+                    <li class="box2">Store</li>
+                    <li class="box3">Gmail</li>
+                    <li class="box4">Images</li>
+                </ul>  
+                <button class="signin"
+                type="button"> Sign In </button>
+        </div>
+        <div class="logo">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+        </div>
+            <div class="search">
+            <form id="form"> 
+                <input type="search" id="query" name="q" placeholder="Search...">
+            </form>
+            </div>
+        <div class="container">
+            <div class="buttons">
+                <button>Google Search</button>
+                <button>I'm Feeling Lucky</button>
+            </div>
+        </div>
+        <footer>United Kingdom</footer>
+        </div>
+    </body>
+</html>
