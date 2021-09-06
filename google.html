@@ -4,29 +4,123 @@
 <head>
   <title>Google</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    .logo{
-        display: block;
-        margin: 0 auto;
-        padding: 100px;
-        } 
-    .searchbar{
-        align-items: center;
-        display: block;
-        margin: 0 auto;
-        }  
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      float: left;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    }
+
+    li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li button {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 10px 25px;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    }
+
+    li button:hover {
+      background-color: #1A73EB;
+      color: white;
+    }
+
+    .logo-container{
+      height: 350px;
+      width: 300px;
+      justify-content: center;
+      margin: auto;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto;
+      padding: 150px;
+    }
+
+    .search-container {
+      padding: 10px;
+      position: relative;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .search-bar {
+      display: block;
+      align-items: center;
+      margin: 0 auto;
+      height: 40px;
+      width: 75vw;
+      max-width: 600px;
+      border: 1px solid #9a9a9a;
+      border-radius: 25px;
+    }
+
+    .search-button {
+      display: float;
+      align-items: center;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    .location{
+      background-color: #e8e8e8;
+      padding: 15px 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      color: rgba(0,0,0,.54);
+      border-bottom: 1px solid #dadce0;
+    }
+    .spacer{
+      display: block;
+      flex-grow: 1;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      height: 350px;
+      width: auto;
+    }
   </style>
 </head>
 
 <body>
-  <div>
-    <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+  <ul>
+    <li><a href="About.asp">About</a></li>
+    <li><a href="Store.asp">Store</a></li>
+    <li style="float: right"><button type="Submit">Sign In</button></li>
+    <li style="float: right"><a href="Images.asp">Images</a></li>
+    <li style="float: right"><a href="Gmail.asp">Gmail</a></li>
+  </ul>
+  <div class="logo-container">
+    <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+      alt="Google Logo">
   </div>
-  <div>
-    <input class="searchbar" type="text" placeholder="Search..."> 
-    <button class="searchbar" type="submit"><i class=""></i>Submit</button>
+  <div class="search-container">
+    <input class="search-bar" type="text" placeholder=""> <br>
+    <button class="search-button" type="submit"><i class=""></i>Google Search</button>
+    <button class="search-button" type="submit"><i class=""></i>I'm Feeling Lucky</button>
   </div>
+  <div class="spacer"></div>
+  <div class="location">United Kingdom</div>
+  <footer></footer>
 </body>
 
 <html>
