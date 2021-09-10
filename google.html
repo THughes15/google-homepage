@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+
     ul {
       list-style-type: none;
       margin: 0;
@@ -16,7 +17,7 @@
     li {
       float: left;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
+      font-size: 13px;
     }
 
     li a {
@@ -27,34 +28,44 @@
       text-decoration: none;
     }
 
+    li a:hover{
+      text-decoration: underline;
+    }
+
+    .no-padding {
+      padding: 8px 16px;
+    }
+
     li button {
       display: block;
-      color: black;
-      text-align: center;
+      color: #fff;
+      background-color: #1a73e8;
+      border: 1px;
+      border-radius: 4px;
       padding: 10px 25px;
-      text-decoration: none;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
+      font-family: 'Google Sans' 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
     }
 
-    li button:hover {
-      background-color: #1A73EB;
-      color: white;
+    li button:hover, 
+    li button:focus {
+      opacity: 1;
+      box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
     }
 
-    .logo-container{
-      height: 350px;
-      width: 300px;
+    .logo-container {
+      height: 300px;
+      width: 80vw;
       justify-content: center;
       margin: auto;
       display: flex;
-      align-items: flex-start;
+      align-items: flex-end;
     }
 
     .logo {
       display: block;
       margin: 0 auto;
-      padding: 150px;
     }
 
     .search-container {
@@ -62,42 +73,125 @@
       position: relative;
       margin: 0 auto;
       text-align: center;
+      width: 100vw;
+      max-width: 800px;
     }
 
-    .search-bar {
-      display: block;
+    .searchbar {
+      display: relative;
       align-items: center;
       margin: 0 auto;
       height: 40px;
-      width: 75vw;
+      width: 75%;
       max-width: 600px;
-      border: 1px solid #9a9a9a;
+      border: 1px solid #dfe1e5;
       border-radius: 25px;
+    }
+
+    .searchbar:hover, 
+    .searchbar:focus-within {
+      border-color: white;
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    } 
+    
+    #search-icon{
+      position: absolute;
+      padding: 11px 11px;
+      filter: contrast(0);
+      top: 10px;
+      left: 110px;
+      max-width: 18vw;
+    }
+
+    #voice-icon{
+      position: absolute;
+      padding: 11px 11px;
+      filter: contrast(0);
+      top: 10px;
+      left: 665px;
+      max-width: 18vw;
     }
 
     .search-button {
       display: float;
       align-items: center;
       margin: 0 auto;
-      padding: 10px;
+      padding: 0px 16px;
+      color: #3c4043 
+      background-color: #f8f9fa;
+      border: 1px solid #f8f9fa;
+      border-radius: 4px;
+      font-family: Arial, Helvetica, sans-serif;
+      height: 36px;
+      margin: 11px 4px;
+      min-width: 54px;
     }
 
-    .location{
-      background-color: #e8e8e8;
-      padding: 15px 30px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
-      color: rgba(0,0,0,.54);
-      border-bottom: 1px solid #dadce0;
+    .search-button:hover {
+      border-color: #dadce0;
+      box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
     }
-    .spacer{
+
+    .spacer {
       display: block;
       flex-grow: 1;
       flex-shrink: 0;
       box-sizing: border-box;
-      height: 350px;
+      height: 450px;
       width: auto;
     }
+
+    footer {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 8px 0px;
+      background-color: #f2f2f2;
+      bottom: 0;
+      left: 0;
+    }
+
+    .location {
+      display: flex;
+      position: absolute;
+      bottom: 53px;
+      left: 0;
+      background-color: #f2f2f2;
+      padding: 15px 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      color: rgba(0, 0, 0, .54);
+      border-bottom: 1px solid #dadce0;
+      text-decoration: none;
+      width: 98.9%;
+    }
+
+    .footer-left {
+      display: flex;
+      margin-left: 10px;
+    }
+
+    .footer-right {
+      display: flex;
+      margin-right: 10px;
+    }
+
+    footer div a{
+      color: rgba(0, 0, 0, .54);
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 10px;
+      font-size: 15px;
+      background-color: #f2f2f2;
+      text-decoration: none;
+    }
+
+    footer div a:hover {
+      text-decoration: underline;
+    }
+
+
   </style>
 </head>
 
@@ -106,6 +200,7 @@
     <li><a href="About.asp">About</a></li>
     <li><a href="Store.asp">Store</a></li>
     <li style="float: right"><button type="Submit">Sign In</button></li>
+    <li style="float: right"><a class="no-padding" href="Apps.asp"><span class="material-icons-outlined">apps</span></a></li>
     <li style="float: right"><a href="Images.asp">Images</a></li>
     <li style="float: right"><a href="Gmail.asp">Gmail</a></li>
   </ul>
@@ -113,14 +208,29 @@
     <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
       alt="Google Logo">
   </div>
-  <div class="search-container">
-    <input class="search-bar" type="text" placeholder=""> <br>
-    <button class="search-button" type="submit"><i class=""></i>Google Search</button>
-    <button class="search-button" type="submit"><i class=""></i>I'm Feeling Lucky</button>
+  <form>
+    <div class="search-container">
+      <span id="search-icon" class="material-icons-outlined">search</span>
+      <input class="searchbar" type="text">
+      <span id="voice-icon" class="material-icons-outlined">settings_voice</span> <br>
+      <button class="search-button" type="submit"><i class=""></i>Google Search</button>
+      <button class="search-button" type="submit"><i class=""></i>I'm Feeling Lucky</button>
+    </div>
+  </form>
+  <footer>
+    <a  class="location" href="#">United Kingdom</a></li>
+    <div class="footer-left">
+      <a  href="Advertising.asp">Advertising</a></li>
+      <a  href="Business.asp">Business</a></li>
+      <a  href="HSW.asp">How Search Works</a></li>
+    </div>
+    <div class="footer-right">
+      <a  href="Privacy.asp">Privacy</a></li>
+      <a  href="Terms.asp">Terms</a></li>
+      <a  href="Settings.asp">Settings</a></li>
+    </div>
+  </footer>
   </div>
-  <div class="spacer"></div>
-  <div class="location">United Kingdom</div>
-  <footer></footer>
 </body>
 
 <html>
